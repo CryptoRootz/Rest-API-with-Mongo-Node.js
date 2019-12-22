@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv/config');
 // const MongoClient = require('mongodb').MongoClient;
 // const uri = "mongodb+srv://rootzman:danceflow1@cluster0-bsgyj.mongodb.net/test?retryWrites=true&w=majority";
@@ -14,6 +15,8 @@ require('dotenv/config');
 
 const app = express();
 
+// MIDDLEWARES
+app.use(cors());
 app.use(bodyParser.json());
 
 // Import Routes
